@@ -1,5 +1,6 @@
-
+ 
 const menuBurguer = document.querySelector('#menu-burguer-icon'); 
+const navBurguer = document.querySelector('#menu-burguer'); 
 
 document.addEventListener('DOMContentLoaded', () => {
   menuBurguer.addEventListener('click', menuBurguerClick);
@@ -7,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function menuBurguerClick(e) {
   e.preventDefault();
-  console.log('hola')
+  navBurguer.classList.toggle('active');
 }
 

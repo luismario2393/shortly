@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,30 +14,61 @@
   <title>SHORTLY</title>
   
 </head>
-<body class="container">
-  <header class="header">
+<body>
+  <header class="header container">
     <a href="#"><img src="./images/logo.svg" alt="Logo"></a>
-    <a id="menu-burguer-icon" href=""><i class="fas fa-bars burguer"></i></a>
+    <a class="menu-burguer-icon" id="menu-burguer-icon" href=""><i class="fas fa-bars burguer"></i></a>
+    <nav class="menu-burguer container" id="menu-burguer">
+      <ul>
+        <div class="menu-burguer_menu">
+          <li><a class="negro" href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+        </div>
+        <div class="menu-burguer_login">
+          <div class="menu-burguer_login-small">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </div>
+        </div>
+      </ul>
+    </nav>
   </header>
-  <nav class="menu-burguer" id="menu-burguer">
-    <ul>
-      <div class="menu-burguer_menu">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Resources</a></li>
+
+  <section class="section">
+    <div class="section-img">
+      <img src="./images/illustration-working.svg" alt="working">
+    </div>
+    <div class="section-text container">
+      <h1>More than just shorter links</h1>
+      <p>
+        Build your brand’s recognition and get detailed insights 
+        on how your links are performing.
+      </p>
+      <div class="container-button">
+        <a class="button-get" href="#">Get Started</a>
       </div>
-      <div class="menu-burguer_login">
-        <div class="menu-burguer_login-small">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Sign Up</a></li>
+    </div>
+  </section>
+
+  <main>
+    <form class="form container">
+      <div class="container-input">
+        <img class="img-shorten" src="./images/bg-shorten-mobile.svg" alt="">
+        <div class="container-input-small">
+          <input class="input-link" type="text" name="link" id="input-link" placeholder="Shorten a link here...">
+          <input class="input-submit" type="submit" value="Shorten it!">
         </div>
       </div>
-    </ul>
-  </nav>
-
-  <section class="section-img">
-    <img src="./images/illustration-working.svg" alt="working">
-  </section>
+    </form>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+  </main>
 
   <script src="./js/index.js"></script>
 </body>
