@@ -1,0 +1,106 @@
+:root { 
+  /* Primary color */
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+
+  /* Secondary color */
+  --red: hsl(0, 87%, 67%);
+
+  /*  Neutral color */
+  --gray: hsl(0, 0%, 75%);
+  --grayish-violet: hsl(257, 7%, 63%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+  
+
+  /* Typography */
+  --font-size: 1.8rem;
+
+  /* Font family */
+  --font-family: 'Poppins', sans-serif;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+.container {
+  width: 90%;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header h1 {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  padding: 0;
+}
+.burguer {
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--grayish-violet);
+}
+.section-img {
+  margin-top: 2rem;
+}
+.section-img  img{
+  width: 500px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+.active {
+  display: block !important;
+}
+
+.menu-burguer {
+  display: none;
+  position: fixed;
+  width: 65%;
+}
+.menu-burguer ul {
+  background: var(--dark-violet);
+  text-align: center;
+  list-style: none;
+  padding: 2rem 0 ;
+  border-radius: 1rem;
+}
+.menu-burguer ul li {
+  padding: 2rem 0;
+  font-weight: var(--font-weight-bold);
+  color: var(--very-dark-blue);
+}
+.menu-burguer ul li a {
+  color: white;
+  text-decoration: none;
+}
+.menu-burguer_login {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.menu-burguer_login-small {
+  padding-top: 2rem;
+  border-top: 1px solid var(--grayish-violet);
+  text-align: center;
+  width: 90%;
+}
+
+
