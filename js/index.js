@@ -5,6 +5,7 @@ const form = document.querySelector('#form');
 const inputLink = document.querySelector('#input-link');
 const inputSubmit = document.querySelector('#input-submit');
 const containerInputLink = document.querySelector('#container-input-link');
+const containerInputSubmit = document.querySelector('#container-input-submit');
 
 document.addEventListener('DOMContentLoaded', () => {
   menuBurguer.addEventListener('click', menuBurguerClick);
@@ -20,13 +21,16 @@ function inputSubmitClick(e) {
     const parrafoError = document.createElement('p');
     parrafoError.classList.add('text-red', 'margin-none', 'text-small' );
     parrafoError.textContent = 'Please add a link'
+
   
     if(inputLink.value.length === 0) {
       inputLink.classList.add('border-red', 'text-red');
+      inputSubmit.classList.add('margin-bottom');
       containerInputLink.appendChild(parrafoError);
     } 
     setTimeout(() => {
       inputLink.classList.remove('border-red', 'text-red');
+      inputSubmit.classList.remove('margin-bottom');
       parrafoError.remove();
     }, 3000);
   }

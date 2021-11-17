@@ -313,6 +313,7 @@ main {
   font-size: 1.4rem;
   color: var(--gray);
 }
+
 .input-submit {
   padding: 1.2rem;
   width: 100%;
@@ -338,6 +339,9 @@ main {
 }
 .margin-none {
   margin: 0.5rem 0;
+}
+.margin-bottom {
+  margin-bottom: 2.5rem;
 }
 .text-small {
   font-size: 1.2rem;
