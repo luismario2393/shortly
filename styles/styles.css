@@ -199,8 +199,6 @@ body {
     font-size: 2rem;
   }
 }
-  
-
 .section-text h1 {
   font-size: 4rem;
   text-align: center;
@@ -241,11 +239,14 @@ body {
 main {
   margin-top: 10rem;
   background-color: #f0f1f6;
+ 
 }
 .form {
   background-color: var(--dark-violet);
   border-radius: 1rem;
-  padding: 1rem;
+  position: relative;
+  top: -7rem;
+  
 }
 .container-input {
   display: flex;
@@ -253,17 +254,41 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  /* background-image: url('../images/bg-shorten-mobile.svg');
-  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/bg-shorten-mobile.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 2rem; */
+  background-position: right top;
+  padding: 2rem;
+  border-radius: 1rem;
 }
+@media (min-width: 768px) {
+  .container-input {
+    padding: 4rem;
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  .container-input-small {
+    flex-direction: row !important;
+  }
+  .input-submit {
+    padding: 2rem !important;
+    width: auto !important;
+    border-radius: 1rem !important;
+  }
+  .input-link {
+    padding: 2rem !important;
+    border-radius: 1rem !important;
+   
+  }
+  .input-link::placeholder {
+    font-size: 1.8rem !important;
+  }
+}
+  
+
 .img-shorten {
-  position: relative;
-  left: 49px;
-  bottom: 10px;
   border-radius: 1rem;
 }
 .container-input-small {
@@ -272,12 +297,14 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  position: absolute;
-  width: 90%;
+  width: 100%;
+}
+.container-input-link {
+  width: 100%;
 }
 .input-link {
-  padding: 1rem;
-  width: 90%;
+  padding: 1.2rem;
+  width: 100%;
   border-radius: 0.5rem;
   border: none;
   outline: none;
@@ -287,8 +314,8 @@ main {
   color: var(--gray);
 }
 .input-submit {
-  padding: 1rem;
-  width: 90%;
+  padding: 1.2rem;
+  width: 100%;
   border-radius: 0.5rem;
   border: none;
   outline: none;
@@ -299,4 +326,20 @@ main {
 .input-submit:hover {
   background-color: hsl(180, 45%, 68%);
   transition: 0.3s ease;
+}
+.border-red {
+  border: 3px solid var(--red) !important;
+}
+.text-red {
+  color: var(--red) !important;
+}
+.text-red::placeholder {
+  color: var(--red) !important;
+}
+.margin-none {
+  margin: 0.5rem 0;
+}
+.text-small {
+  font-size: 1.2rem;
+  font-style: italic;
 }

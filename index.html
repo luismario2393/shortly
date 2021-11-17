@@ -52,12 +52,13 @@
   </section>
 
   <main>
-    <form class="form container">
+    <form class="form container" id="form">
       <div class="container-input">
-        <img class="img-shorten" src="./images/bg-shorten-mobile.svg" alt="">
         <div class="container-input-small">
-          <input class="input-link" type="text" name="link" id="input-link" placeholder="Shorten a link here...">
-          <input class="input-submit" type="submit" value="Shorten it!">
+          <div class="container-input-link" id="container-input-link">
+            <input class="input-link" type="text" name="link" id="input-link" placeholder="Shorten a link here...">
+          </div>
+          <input class="input-submit" type="submit" value="Shorten it!" id="input-submit">
         </div>
       </div>
     </form>
@@ -68,6 +69,7 @@
     <p>1</p>
     <p>1</p>
     <p>1</p>
+   
   </main>
 
   <script src="./js/index.js"></script>
