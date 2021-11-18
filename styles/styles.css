@@ -603,6 +603,10 @@ footer .container-footer {
   .container-copy a {
     font-size: 1.8rem !important;
   }
+  .icon-close {
+    
+    margin-top: 0 !important;
+  }
 }
   
 
@@ -624,4 +628,19 @@ footer .container-footer {
 }
 .button-copy {
   margin-top: 1rem;
+}
+.copy-x {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.icon-close {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: var(--cyan);
+}
+.icon-close:hover {
+  cursor: pointer;
+  color: var(--red);
+  transition: 0.3s ease;
 }
