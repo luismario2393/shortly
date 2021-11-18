@@ -621,14 +621,16 @@ footer .container-footer {
 .container-copy {
   padding: 2rem;
 }
-.container-copy a {
+.container-copy .input-url {
   color: var(--cyan);
   text-decoration: none;
   font-size: 1.6rem;
+  border: none;
+  outline: none;
 }
 .button-copy {
   margin-top: 1rem;
-}
+} 
 .copy-x {
   display: flex;
   align-items: center;
@@ -643,4 +645,13 @@ footer .container-footer {
   cursor: pointer;
   color: var(--red);
   transition: 0.3s ease;
+}
+.copied {
+  background-color: var(--dark-violet);
+}
+.copied:hover {
+  background-color: var(--dark-violet) !important;
+}
+.no-disponible {
+  visibility: hidden;
 }

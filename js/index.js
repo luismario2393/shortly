@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   insertarHtml(urls);
   menuBurguer.addEventListener('click', menuBurguerClick);
   form.addEventListener('submit', inputSubmitClick);
+  copiarInput();
+  eliminarUrl();
 });
 
 function inputSubmitClick(e) {
@@ -71,16 +73,16 @@ function insertarHtml(datos) {
     resultado.removeChild(resultado.firstChild);
   }
   datos.forEach(dato => {
-    const {  url, urlShort } = dato;
+    const { id, url, urlShort } = dato;
     
-    const urlsMax = url.slice(0, 60);
+    const urlsMax = url.slice(0, 60); 
 
     const div = document.createElement('div');
     div.classList.add('container-resultado');
     div.innerHTML = `
       <p>${urlsMax}</p>
       <div class="container-copy">
-        <a href="${url}">${urlShort}</a>
+        <input class="input-url" id="${id}" value="${urlShort}" readonly>
         <div class="copy-x">
           <input class="input-submit button-copy" type="submit" value="Copy" id="input-submit-copy">
           <i class="far fa-times-circle icon-close" id="icon-close"></i>
@@ -89,13 +91,38 @@ function insertarHtml(datos) {
     `;
     resultado.appendChild(div);
   });
+  
 
   sincronizarStorage();
-
 }
+function eliminarUrl(e) {
+  resultado.addEventListener('click', e => {
+    if(e.target.id === 'icon-close') {
+      const id = parseInt(e.target.parentElement.previousElementSibling.id);
+      urls = urls.filter(url => url.id !== id);
+      insertarHtml(urls);
+    }
+  })
+}
+function copiarInput(e) {
+  resultado.addEventListener('click', e => {
+    if(e.target.id === 'input-submit-copy') {
+      const input = e.target;
+      const url = input.parentElement.previousElementSibling;
+      url.select();
+      document.execCommand('copy');
+      input.classList.add('copied');
+      input.value = 'Copied!';
+      input.disabled = true;
+     
+    }
+  })
+}
+
 function sincronizarStorage() {
   localStorage.setItem('urls', JSON.stringify(urls));
 }
+
 
 function menuBurguerClick(e) {
   e.preventDefault();
